@@ -242,7 +242,7 @@ h1 {
 
 /* CONTENIDO OPCIONES */
 .opciones {
-  background-image: url(Multimedia/DSC06054.JPG);
+  background-image: url(Multimedia/DSC06054.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -377,30 +377,25 @@ footer i:hover {
 }
 
 /*==========MIS CLASES==========*/
-main.mis-clases {
+.mis-clases {
   height: 40vh;
   position: relative;
   overflow: hidden;
 }
-main.mis-clases video {
-  width: 100%;
-  height: 100%;
+.mis-clases video {
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
 }
-main.mis-clases .titulo-clases {
+.mis-clases .titulo-clases {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  place-content: center;
   text-align: center;
-  width: 100%;
   z-index: 1;
 }
-main.mis-clases .titulo-clases h1 {
+.mis-clases .titulo-clases h1 {
   color: white;
   border: 4px solid #E72F59;
   background-color: rgba(0, 0, 0, 0.5);

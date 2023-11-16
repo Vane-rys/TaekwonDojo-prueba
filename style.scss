@@ -294,7 +294,7 @@ h1 {
 
 /* CONTENIDO OPCIONES */
 .opciones {
-    background-image: url(Multimedia/DSC06054.JPG);
+    background-image: url(Multimedia/DSC06054.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -444,14 +444,12 @@ footer {
 }
 
 /*==========MIS CLASES==========*/
-main.mis-clases {
+.mis-clases {
   height: 40vh;
   position: relative;
   overflow: hidden;
 
   video {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -461,11 +459,8 @@ main.mis-clases {
 
   .titulo-clases {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    place-content: center;
     text-align: center;
-    width: 100%;
     z-index: 1; // Asegura que el título esté sobre el video
 
     h1 {
