@@ -7,8 +7,6 @@
   font-family: "Lato", sans-serif !important;
 }
 
-/* VARIABLES REUTILIZABLES */
-/* box-shadow foto de perfil*/
 html {
   scroll-behavior: smooth;
 }
@@ -127,24 +125,13 @@ html {
 /* ========HOME======== */
 /* MAIN */
 main {
+  background: url(Multimedia/video-home.mp4);
   height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-main video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-main .titulo {
-  z-index: 1;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  display: grid;
+  place-content: center;
 }
 main .titulo h1 {
   color: white;
@@ -242,7 +229,7 @@ h1 {
 
 /* CONTENIDO OPCIONES */
 .opciones {
-  background-image: url(Multimedia/DSC06054.jpg);
+  background-image: url(Multimedia/DSC06054.JPG);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -273,11 +260,9 @@ h1 {
   margin: 10px 10px;
   color: white;
   border-radius: 10px;
-  display: flex;
-  /* Agregué display: flex; para centrar verticalmente */
+  display: flex; /* Agregué display: flex; para centrar verticalmente */
   justify-content: center;
-  align-items: center;
-  /* Centra verticalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
 }
 
 /* CONTENIDO VIDEOS */
@@ -378,31 +363,20 @@ footer i:hover {
 
 /*==========MIS CLASES==========*/
 .mis-clases {
+  background-image: url(Multimedia/video-clase.mp4);
   height: 40vh;
-  position: relative;
-  overflow: hidden;
-}
-.mis-clases video {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.mis-clases .titulo-clases {
-  position: absolute;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  display: grid;
   place-content: center;
-  text-align: center;
-  z-index: 1;
 }
-.mis-clases .titulo-clases h1 {
+.mis-clases h1 {
   color: white;
   border: 4px solid #E72F59;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px 40px;
-  font-family: "Lato", sans-serif;
-  font-weight: normal;
-  font-size: 40px;
+  padding: 40px 80px;
   animation-duration: 3s;
   animation-name: aparecer;
   animation-direction: alternate;
@@ -487,30 +461,20 @@ footer i:hover {
 
 /*=========EVENTOS=========*/
 .mis-eventos {
+  background-image: url(Multimedia/video-torneo.mp4);
   height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-.mis-eventos video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  display: grid;
+  place-content: center;
 }
-.mis-eventos .titulo-eventos {
-  z-index: 1;
-}
-.mis-eventos .titulo-eventos h1 {
+.mis-eventos h1 {
   color: white;
   border: 4px solid #E72F59;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px 40px;
+  padding: 40px 80px;
   animation-duration: 3s;
   animation-name: aparecer;
   animation-direction: alternate;
@@ -583,30 +547,20 @@ footer i:hover {
 
 /*========EXAMEN========*/
 .mi-examen {
+  background-image: url(Multimedia/video-poomsae.mp4);
   height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-.mi-examen video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  display: grid;
+  place-content: center;
 }
-.mi-examen .titulo-examen {
-  z-index: 1;
-}
-.mi-examen .titulo-examen h1 {
+.mi-examen h1 {
   color: white;
   border: 4px solid #E72F59;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px 40px;
+  padding: 40px 80px;
   animation-duration: 3s;
   animation-name: aparecer;
   animation-direction: alternate;
@@ -624,8 +578,7 @@ footer i:hover {
 .videos-exam {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* Centré horizontalmente el contenido en el contenedor */
+  align-items: center; /* Centré horizontalmente el contenido en el contenedor */
 }
 .videos-exam h4 {
   font-size: 22px;
@@ -635,14 +588,11 @@ footer i:hover {
   margin-bottom: 10px;
 }
 .videos-exam .video {
-  text-align: center;
-  /* Centra horizontalmente el título */
-  margin-bottom: 20px;
-  /* Espacio entre los videos */
+  text-align: center; /* Centra horizontalmente el título */
+  margin-bottom: 20px; /* Espacio entre los videos */
 }
 .videos-exam .pdf-container {
-  width: 100% !important;
-  /* Asegura que el "pdf-container" ocupe todo el ancho */
+  width: 100% !important; /* Asegura que el "pdf-container" ocupe todo el ancho */
   text-align: center !important;
   margin-bottom: 50px !important;
 }
@@ -827,21 +777,18 @@ footer i:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    align-items: center;
-    /* Centra horizontalmente el contenido en el contenedor */
+    align-items: center; /* Centra horizontalmente el contenido en el contenedor */
   }
   /* Estilos para .video1, .video2, .video3, .video4 */
   .video1,
   .video2,
   .video3,
   .video4 {
-    text-align: center;
-    /* Centra horizontalmente el título */
+    text-align: center; /* Centra horizontalmente el título */
     width: 100%;
   }
   .pdf-container {
-    width: 100% !important;
-    /* Asegura que el "pdf-container" ocupe todo el ancho */
+    width: 100% !important; /* Asegura que el "pdf-container" ocupe todo el ancho */
     text-align: center !important;
     margin-bottom: 50px !important;
   }
@@ -925,16 +872,14 @@ footer i:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    align-items: center;
-    /* Centra horizontalmente el contenido en el contenedor */
+    align-items: center; /* Centra horizontalmente el contenido en el contenedor */
   }
   /* Estilos para .video1, .video2, .video3, .video4 */
   .video1,
   .video2,
   .video3,
   .video4 {
-    text-align: center;
-    /* Centra horizontalmente el título */
+    text-align: center; /* Centra horizontalmente el título */
     width: 100%;
   }
 }

@@ -7,24 +7,23 @@
     font-family: 'Lato', sans-serif !important;
 }
 
-/* VARIABLES REUTILIZABLES */
-$color-principal: #E72F59;
-$color-secundario: white;
-$color-terciario: black;
-$color-wsapp: #25D366;
-$color-hover: #ca244b;
-$color-dark: #B61538;
+// VARIABLES REUTILIZABLES
+    $color-principal: #E72F59;
+    $color-secundario: white;
+    $color-terciario: black;
+    $color-wsapp: #25D366;
+    $color-hover: #ca244b;
+    $color-dark: #B61538;
 
-$bs-bordes-fp: 0 0 0 5px green, 0 0 0 15px yellow;
-/* box-shadow foto de perfil*/
+    $bs-bordes-fp: 0 0 0 5px green, 0 0 0 15px yellow; //  box-shadow foto de perfil
 
-$size-nav: 22px;
-$size-h1: 40px;
-$size-h2: 28px;
-$size-h3: 24px;
-$size-h4: 22px;
-$size-p: 20px;
-$size-input: 16px;
+    $size-nav: 22px;
+    $size-h1: 40px;
+    $size-h2: 28px;
+    $size-h3: 24px;
+    $size-h4: 22px;
+    $size-p: 20px;
+    $size-input: 16px;
 
 
 html {
@@ -33,32 +32,28 @@ html {
 
 /* INICIO SESIÓN */
 
-.inicio {
+.inicio{
     color: $color-secundario;
     background-color: $color-principal;
     display: block;
     text-align: center;
     align-items: center;
     margin: 40px;
-
     h1 {
         font-weight: normal;
         font-size: $size-h1;
     }
-
     .logo1 {
         height: 250px;
         margin: 20px 0px;
     }
-
     .correo,
-    .clave {
-        p {
+    .clave{
+        p{
             font-size: $size-p;
             font-weight: lighter;
         }
-
-        input {
+        input{
             background-color: $color-secundario;
             font-size: $size-p;
             width: 300px;
@@ -68,11 +63,9 @@ html {
             margin-bottom: 10px;
         }
     }
-
-    .boton {
+    .boton{
         margin-bottom: 10px;
-
-        .recupera a {
+        .recupera a{
             color: $color-secundario;
             font-size: $size-p;
             text-decoration: none;
@@ -80,8 +73,7 @@ html {
             font-weight: normal;
             display: block;
         }
-
-        .iniciar {
+        .iniciar{
             text-decoration: none;
             background-color: $color-secundario;
             border-radius: 10px;
@@ -89,15 +81,13 @@ html {
             color: $color-terciario;
             margin-top: 10px;
             font-size: $size-p;
-
-            &:hover {
+            &:hover{
                 background-color: rgb(244, 244, 244);
                 color: $color-terciario;
             }
         }
     }
-
-    p a {
+    p a{
         color: $color-secundario;
         font-size: $size-p;
     }
@@ -106,48 +96,39 @@ html {
 /* NAVBAR */
 .navbar {
     background-color: $color-principal;
-
     a {
         font-family: 'Lato', sans-serif !important;
         font-weight: lighter !important;
         font-size: $size-nav;
     }
-
     i {
         font-size: $size-nav;
         color: $color-secundario;
     }
-
     .navbar-toggler {
         color: $color-secundario;
     }
-
     .nav-link {
         color: $color-secundario !important;
         padding-left: 10px;
-
         &:hover {
             color: $color-secundario !important;
             transform: scale(1.05);
         }
     }
-
     &-nav {
         display: flex;
         text-align: center;
         align-items: center;
     }
-
     .dropdown-menu {
         background-color: $color-principal !important;
         color: $color-secundario !important;
         border: none !important;
-
         .dropdown-item {
             background-color: $color-principal !important;
             color: $color-secundario !important;
             text-align: center !important;
-
             &:hover {
                 background-color: $color-principal !important;
                 color: $color-secundario !important;
@@ -155,59 +136,43 @@ html {
             }
         }
     }
-
     &-collapse {
         display: flex;
         justify-content: center;
         margin: 0 20px;
     }
 }
-
 /* ========HOME======== */
 
 /* MAIN */
 main {
+    background: url(Multimedia/video-home.mp4);
     height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    display: grid;
+    place-content: center;
 
-    video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1; // Coloca el video detrás del contenido
+    .titulo h1 {
+        color: $color-secundario;
+        border: 4px solid $color-principal;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px 40px;
+        animation-duration: 3s;
+        animation-name: aparecer;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
     }
-
-    .titulo {
-        z-index: 1; // Asegura que el título esté sobre el video
-        h1 {
-            color: $color-secundario;
-            border: 4px solid $color-principal;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px 40px;
-            animation-duration: 3s;
-            animation-name: aparecer;
-            animation-direction: alternate;
-            animation-iteration-count: 1;
-        }
-    }
-
     @keyframes aparecer {
-        from {
+        from{
             opacity: 0;
         }
-        to {
+        to{
             opacity: 1;
         }
     }
 }
-
 h1 {
     font-family: 'Lato', sans-serif;
     font-weight: normal;
@@ -220,11 +185,10 @@ h1 {
     justify-content: center;
     align-items: center;
     height: 350px;
-
+    
     .perfil {
         text-align: center;
         margin: 20px;
-
         img {
             border-radius: 50%;
             box-shadow: $bs-bordes-fp;
@@ -233,25 +197,21 @@ h1 {
             margin-top: 10px;
             margin-bottom: 10px;
         }
-
         h2 {
             margin: 10px;
             margin-bottom: 10px;
             font-size: $size-h2;
         }
-
         p {
             margin: 0px 10px;
         }
     }
 }
-
-.box-datos {
+.box-datos{
     display: flex;
     justify-content: center !important;
     margin-bottom: 100px;
-
-    .datos {
+    .datos{
         background-color: $color-principal;
         width: auto;
         color: $color-secundario;
@@ -263,19 +223,17 @@ h1 {
         justify-content: space-evenly !important;
         flex-wrap: wrap;
 
-        h3 {
+        h3{
             text-align: center;
             width: 100%;
             margin-top: 0;
-            margin-bottom: 30px;
+            margin-bottom: 30px;            
         }
-
-        p {
+        p{
             font-weight: lighter;
             font-size: $size-p;
         }
-
-        .dato-column {
+        .dato-column{
             display: flex;
             flex-direction: column;
             margin: 10px;
@@ -293,8 +251,8 @@ h1 {
 }
 
 /* CONTENIDO OPCIONES */
-.opciones {
-    background-image: url(Multimedia/DSC06054.jpg);
+.opciones{
+    background-image: url(Multimedia/DSC06054.JPG);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -306,43 +264,39 @@ h1 {
     grid-template-rows: repeat(3);
     align-items: center;
     align-content: center;
-
-    h3 {
+    
+    h3{
         font-size: $size-h3;
         font-weight: lighter;
         text-align: center;
         margin-bottom: 20px;
     }
-
-    a {
+    a{
         text-decoration: none;
         color: $color-secundario;
     }
-
     #clases,
     #avances,
-    #eventos {
+    #eventos{
         background-color: $color-principal;
         padding: 20px 10px;
         margin: 10px 10px;
         color: $color-secundario;
         border-radius: 10px;
-        display: flex;
-        /* Agregué display: flex; para centrar verticalmente */
+        display: flex; /* Agregué display: flex; para centrar verticalmente */
         justify-content: center;
-        align-items: center;
-        /* Centra verticalmente el contenido */
+        align-items: center;  /* Centra verticalmente el contenido */
     }
 }
 
 /* CONTENIDO VIDEOS */
-.videos {
+.videos{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2);
     margin-bottom: 50px;
 
-    h3 {
+    h3{
         color: $color-principal;
         font-size: $size-h2;
         font-family: 'Lato', sans-serif;
@@ -351,35 +305,32 @@ h1 {
         margin-bottom: 20px;
         text-align: center;
     }
-
-    .video {
-        h4 {
+    .video{
+        h4{
             font-size: $size-h4;
             font-weight: normal;
             text-align: center;
             margin: 20px;
         }
-
-        iframe {
+        iframe{
             width: 480px;
             height: 250px;
         }
     }
-
-    .mas-videos {
+    .mas-videos{
         display: flex;
         justify-content: center;
         text-align: center;
         margin: 20px;
 
-        .ver-mas {
+        .ver-mas{
             background-color: $color-principal;
             padding: 10px 20px;
             color: $color-secundario;
             text-decoration: none;
             border-radius: 5px;
 
-            &:hover {
+            &:hover{
                 background-color: $color-hover !important;
                 color: $color-secundario;
             }
@@ -388,27 +339,24 @@ h1 {
 }
 
 /* FOOTER */
-footer {
+footer{
     background-color: $color-principal;
     padding: 30px;
     color: $color-secundario;
     font-size: $size-p;
     text-align: center;
-
-    h2 {
+    h2{
         font-size: $size-h2;
     }
-
-    a {
+    a{
         color: $color-terciario;
         font-size: $size-h1;
     }
-
-    i {
+    i{
         letter-spacing: 25px;
         margin: 20px 0px;
 
-        &:hover {
+        &:hover{
             transform: scale(1.1);
         }
     }
@@ -445,47 +393,33 @@ footer {
 
 /*==========MIS CLASES==========*/
 .mis-clases {
-  height: 40vh;
-  position: relative;
-  overflow: hidden;
-
-  video {
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; // Coloca el video detrás del contenido
-  }
-
-  .titulo-clases {
-    position: absolute;
+    background-image: url(Multimedia/video-clase.mp4);
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    display: grid;
     place-content: center;
-    text-align: center;
-    z-index: 1; // Asegura que el título esté sobre el video
 
     h1 {
-      color: $color-secundario;
-      border: 4px solid $color-principal;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px 40px;
-      font-family: 'Lato', sans-serif;
-      font-weight: normal;
-      font-size: $size-h1;
-      animation-duration: 3s;
-      animation-name: aparecer;
-      animation-direction: alternate;
-      animation-iteration-count: 1;
+        color: $color-secundario;
+        border: 4px solid $color-principal;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 40px 80px;
+        animation-duration: 3s;
+        animation-name: aparecer;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
     }
-  }
-
-  @keyframes aparecer {
-    from {
-      opacity: 0;
+    @keyframes aparecer {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
     }
-    to {
-      opacity: 1;
-    }
-  }
 }
 
 .subtitle {
@@ -574,42 +508,30 @@ footer {
 
 /*=========EVENTOS=========*/
 .mis-eventos {
+    background-image: url(Multimedia/video-torneo.mp4);
     height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    display: grid;
+    place-content: center;
 
-    video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1; // Coloca el video detrás del contenido
+    h1 {
+        color: $color-secundario;
+        border: 4px solid $color-principal;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 40px 80px;
+        animation-duration: 3s;
+        animation-name: aparecer;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
     }
-
-    .titulo-eventos {
-        z-index: 1; // Asegura que el título esté sobre el video
-        h1 {
-            color: $color-secundario;
-            border: 4px solid $color-principal;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px 40px;
-            animation-duration: 3s;
-            animation-name: aparecer;
-            animation-direction: alternate;
-            animation-iteration-count: 1;
-        }
-    }
-
     @keyframes aparecer {
-        from {
+        from{
             opacity: 0;
         }
-        to {
+        to{
             opacity: 1;
         }
     }
@@ -687,42 +609,30 @@ footer {
 
 /*========EXAMEN========*/
 .mi-examen {
+    background-image: url(Multimedia/video-poomsae.mp4);
     height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    display: grid;
+    place-content: center;
 
-    video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1; // Coloca el video detrás del contenido
+    h1 {
+        color: $color-secundario;
+        border: 4px solid $color-principal;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 40px 80px;
+        animation-duration: 3s;
+        animation-name: aparecer;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
     }
-
-    .titulo-examen {
-        z-index: 1; // Asegura que el título esté sobre el video
-        h1 {
-            color: $color-secundario;
-            border: 4px solid $color-principal;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px 40px;
-            animation-duration: 3s;
-            animation-name: aparecer;
-            animation-direction: alternate;
-            animation-iteration-count: 1;
-        }
-    }
-
     @keyframes aparecer {
-        from {
+        from{
             opacity: 0;
         }
-        to {
+        to{
             opacity: 1;
         }
     }
@@ -731,8 +641,7 @@ footer {
 .videos-exam {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* Centré horizontalmente el contenido en el contenedor */
+    align-items: center; /* Centré horizontalmente el contenido en el contenedor */
 
     h4 {
         font-size: $size-h4;
@@ -741,17 +650,12 @@ footer {
         margin-top: 50px;
         margin-bottom: 10px;
     }
-
     .video {
-        text-align: center;
-        /* Centra horizontalmente el título */
-        margin-bottom: 20px;
-        /* Espacio entre los videos */
+        text-align: center; /* Centra horizontalmente el título */
+        margin-bottom: 20px; /* Espacio entre los videos */
     }
-
     .pdf-container {
-        width: 100% !important;
-        /* Asegura que el "pdf-container" ocupe todo el ancho */
+        width: 100% !important; /* Asegura que el "pdf-container" ocupe todo el ancho */
         text-align: center !important;
         margin-bottom: 50px !important;
 
@@ -800,7 +704,7 @@ footer {
         justify-content: center;
     }
 
-    .videos iframe {
+    .videos iframe{
         width: 100vw !important;
     }
 
@@ -980,8 +884,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        align-items: center;
-        /* Centra horizontalmente el contenido en el contenedor */
+        align-items: center; /* Centra horizontalmente el contenido en el contenedor */
     }
 
     /* Estilos para .video1, .video2, .video3, .video4 */
@@ -989,17 +892,15 @@ footer {
     .video2,
     .video3,
     .video4 {
-        text-align: center;
-        /* Centra horizontalmente el título */
+        text-align: center; /* Centra horizontalmente el título */
         width: 100%;
     }
 
     .pdf-container {
-        width: 100% !important;
-        /* Asegura que el "pdf-container" ocupe todo el ancho */
-        text-align: center !important;
-        margin-bottom: 50px !important;
-    }
+    width: 100% !important; /* Asegura que el "pdf-container" ocupe todo el ancho */
+    text-align: center !important;
+    margin-bottom: 50px !important;
+}
 
 }
 
@@ -1093,14 +994,13 @@ footer {
     .ver-mas {
         display: inline-block;
     }
-
+    
     /*PREPARO MI EXAMEN*/
     .videos-exam {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        align-items: center;
-        /* Centra horizontalmente el contenido en el contenedor */
+        align-items: center; /* Centra horizontalmente el contenido en el contenedor */
     }
 
     /* Estilos para .video1, .video2, .video3, .video4 */
@@ -1108,8 +1008,7 @@ footer {
     .video2,
     .video3,
     .video4 {
-        text-align: center;
-        /* Centra horizontalmente el título */
+        text-align: center; /* Centra horizontalmente el título */
         width: 100%;
     }
 
