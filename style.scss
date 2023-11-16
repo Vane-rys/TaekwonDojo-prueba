@@ -444,46 +444,53 @@ footer {
 }
 
 /*==========MIS CLASES==========*/
-.mis-clases {
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
+main.mis-clases {
+  height: 40vh;
+  position: relative;
+  overflow: hidden;
 
-    video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1; // Coloca el video detrás del contenido
-    }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; // Coloca el video detrás del contenido
+  }
 
-    .titulo-clases {
-        z-index: 1; // Asegura que el título esté sobre el video
-        h1 {
-            color: $color-secundario;
-            border: 4px solid $color-principal;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px 40px;
-            animation-duration: 3s;
-            animation-name: aparecer;
-            animation-direction: alternate;
-            animation-iteration-count: 1;
-        }
-    }
+  .titulo-clases {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 1; // Asegura que el título esté sobre el video
 
-    @keyframes aparecer {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    h1 {
+      color: $color-secundario;
+      border: 4px solid $color-principal;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 40px;
+      font-family: 'Lato', sans-serif;
+      font-weight: normal;
+      font-size: $size-h1;
+      animation-duration: 3s;
+      animation-name: aparecer;
+      animation-direction: alternate;
+      animation-iteration-count: 1;
     }
+  }
+
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .subtitle {

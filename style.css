@@ -377,15 +377,12 @@ footer i:hover {
 }
 
 /*==========MIS CLASES==========*/
-.mis-clases {
+main.mis-clases {
   height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
-.mis-clases video {
+main.mis-clases video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -394,14 +391,23 @@ footer i:hover {
   left: 0;
   z-index: -1;
 }
-.mis-clases .titulo-clases {
+main.mis-clases .titulo-clases {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
   z-index: 1;
 }
-.mis-clases .titulo-clases h1 {
+main.mis-clases .titulo-clases h1 {
   color: white;
   border: 4px solid #E72F59;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px 40px;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 40px;
   animation-duration: 3s;
   animation-name: aparecer;
   animation-direction: alternate;
