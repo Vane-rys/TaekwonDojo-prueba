@@ -125,7 +125,7 @@ html {
 /* ========HOME======== */
 /* MAIN */
 main {
-  background: url(Multimedia/video-home.mp4);
+  background-image: url(Multimedia/video-home.mp4);
   height: 40vh;
   background-size: cover;
   background-position: bottom;
