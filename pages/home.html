@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <title>Taekwon Dojo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" href="../Multimedia/logo.png" />
+</head>
+
+<body>
+    <!--NAVBAR INICIA-->
+    <nav class="navbar navbar-expand-lg  navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../Multimedia/logo.png" alt="Logo" width="40" height="auto"
+                    class="d-inline-block align-text-center">
+                TaekwonDojo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clases">Clases</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="avances" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mis Avances
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Grados</a></li>
+                            <li><a class="dropdown-item" href="#">Torneos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#eventos">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contenido">Preparo mi Examen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--NAVBAR FIN-->
+    <main>
+        <video autoplay loop>
+            <source src="../Multimedia/video-home.mp4" type="video/mp4">
+        </video>
+        <div class="titulo">
+            <h1>TaekwonDojo</h1>
+        </div>
+    </main>
+    <!--PERFIL INICIO-->
+    <section>
+        <div class=" contenedor">
+            <div class="perfil ">
+                <img src="../Multimedia/IMG_2669.JPG" alt="Foto de perfil alumna">
+                <h2>Julietta Navarro Reyes</h2>
+                <p>7°Gup</p>
+            </div>
+        </div>
+        <div class="box-datos">
+            <div class="datos">
+                <h3>Mis Datos</h3>
+                <div class="dato-column">
+                    <div class="dato1">
+                        <p><strong>Edad</strong></p>
+                        <p>8 años</p>
+                    </div>
+                    <div class="dato3">
+                        <p><strong>Peso</strong></p>
+                        <p>22 kg</p>
+                    </div>
+                    <div class="dato5">
+                        <p><strong>Profesor</strong></p>
+                        <p>Eduardo Roblero Fica</p>
+                    </div>
+                </div>
+                <div class="dato-column">
+                    <div class="dato2">
+                        <p><strong>Fecha de nacimiento</strong></p>
+                        <p>16/04/2015</p>
+                    </div>
+                    <div class="dato4">
+                        <p><strong>Talla</strong></p>
+                        <p>125 cm</p>
+                    </div>
+                    <div class="dato6">
+                        <p><strong>Academia</strong></p>
+                        <p>Chong-Ki Melipilla</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--PERFIL FINAL-->
+    <!-------OPCIONES------->
+    <section class="opciones">
+        <a href="clase.html">
+            <div id="clases">
+                <h3>CLASES</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="81" height="81" viewBox="0 0 81 81" fill="none">
+                    <path
+                        d="M42.1875 40.5002L40.6688 71.0439C40.6125 71.9439 40.2604 72.7033 39.6124 73.3221C38.9644 73.9408 38.079 74.2502 36.9563 74.2502C36.0563 74.2502 35.2834 73.9408 34.6376 73.3221C33.9919 72.7033 33.6398 71.9439 33.5813 71.0439L32.0625 43.8752L21.3469 37.7158L20.1656 42.1033L25.3125 51.1314C25.7625 51.9189 25.8615 52.7627 25.6095 53.6627C25.3575 54.5627 24.8366 55.2377 24.0469 55.6877C23.2594 56.1377 22.4156 56.2502 21.5156 56.0252C20.6156 55.8002 19.9406 55.2939 19.4906 54.5064L13.5844 44.2971C13.3594 43.9033 13.2188 43.4814 13.1625 43.0314C13.1063 42.5814 13.1344 42.1314 13.2469 41.6814L16.875 28.5189L36.2813 17.3814L29.3625 10.4627C28.7438 9.84395 28.4198 9.06995 28.3905 8.1407C28.3613 7.21145 28.6853 6.41045 29.3625 5.7377C29.9813 5.11895 30.7688 4.80957 31.725 4.80957C32.6813 4.80957 33.4688 5.11895 34.0875 5.7377L44.1281 15.6939C44.9156 16.4814 45.2396 17.4242 45.1001 18.5222C44.9606 19.6202 44.4116 20.4493 43.4531 21.0096L35.1 25.8189L39.15 29.3627L64.4625 8.69082C65.0813 8.12832 65.8271 7.88982 66.7001 7.97532C67.5731 8.06082 68.346 8.4962 69.0188 9.28145C69.525 9.9002 69.7646 10.6033 69.7376 11.3908C69.7106 12.1783 69.4148 12.8814 68.85 13.5002L42.1875 40.5002ZM16.875 23.6252C15.0188 23.6252 13.4291 22.9637 12.1061 21.6407C10.7831 20.3177 10.1228 18.7292 10.125 16.8752C10.125 15.0189 10.7865 13.4293 12.1095 12.1063C13.4325 10.7833 15.021 10.1229 16.875 10.1252C18.7313 10.1252 20.3209 10.7867 21.6439 12.1097C22.9669 13.4327 23.6273 15.0212 23.625 16.8752C23.625 18.7314 22.9635 20.3211 21.6405 21.6441C20.3175 22.9671 18.729 23.6274 16.875 23.6252Z"
+                        fill="white" />
+                </svg>
+            </div>
+        </a>
+        <a href="">
+            <div id="avances">
+                <h3>MIS AVANCES</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M38.5003 8.82335C33.1822 8.82335 28.0819 10.936 24.3214 14.6965C20.5609 18.457 18.4483 23.5573 18.4483 28.8754C18.4483 34.1936 20.5609 39.2939 24.3214 43.0544C28.0819 46.8149 33.1822 48.9275 38.5003 48.9275C43.8185 48.9275 48.9188 46.8149 52.6793 43.0544C56.4398 39.2939 58.5524 34.1936 58.5524 28.8754C58.5524 23.5573 56.4398 18.457 52.6793 14.6965C48.9188 10.936 43.8185 8.82335 38.5003 8.82335ZM13.6358 28.8754C13.6357 24.7543 14.6601 20.6977 16.6166 17.0706C18.5732 13.4435 21.4007 10.3596 24.8447 8.09625C28.2887 5.8329 32.2413 4.46108 36.347 4.10417C40.4527 3.74726 44.5827 4.41645 48.3656 6.05156C52.1485 7.68668 55.4657 10.2364 58.0188 13.4715C60.5719 16.7066 62.2808 20.5255 62.992 24.5849C63.7031 28.6442 63.3941 32.8167 62.0927 36.727C60.7913 40.6373 58.5384 44.1628 55.5366 46.9865C55.6216 47.1464 55.6884 47.3153 55.7355 47.4902L57.8209 55.0907C58.793 58.6423 59.5791 61.501 59.9352 63.7211C60.2849 65.8964 60.3555 68.1358 59.1396 69.9581C58.4466 70.9944 57.5033 71.8446 56.3932 72.4093C54.372 73.436 52.1678 72.9323 50.1947 72.1847C48.1799 71.4276 45.6517 70.1089 42.5461 68.4887L42.3953 68.4117C40.0724 67.2022 39.4661 66.9295 38.8821 66.8685C38.6283 66.8413 38.3724 66.8413 38.1185 66.8685C37.5346 66.9295 36.9315 67.2022 34.6054 68.4117L34.4546 68.4887C31.349 70.1089 28.8208 71.4243 26.806 72.1847C24.8328 72.9323 22.6287 73.436 20.6075 72.4093C19.4973 71.8408 18.5517 70.9968 17.8611 69.9581C16.6452 68.1358 16.7158 65.8964 17.0655 63.7211C17.4216 61.501 18.2076 58.6423 19.183 55.0907L21.2652 47.487C21.3126 47.3133 21.3794 47.1454 21.4641 46.9865C18.9892 44.6642 17.0174 41.8585 15.6708 38.7432C14.3242 35.6279 13.6316 32.2693 13.6358 28.8754ZM25.5387 50.0986L23.8639 56.2136C22.8373 59.9481 22.1282 62.5533 21.817 64.4847C21.4962 66.4899 21.7368 67.0931 21.8651 67.2824C22.0972 67.6373 22.4164 67.9268 22.7923 68.123C22.8661 68.1583 23.3249 68.3572 25.1088 67.6834C26.8188 67.0386 29.0871 65.8579 32.3821 64.1446L32.7125 63.9714C34.5348 63.0185 36.0011 62.2549 37.6084 62.0817C38.202 62.0175 38.7987 62.0175 39.3923 62.0817C40.9964 62.2517 42.4658 63.0185 44.2882 63.9714L44.6186 64.1446C47.9104 65.8579 50.1819 67.0386 51.8919 67.6834C53.6758 68.3572 54.1378 68.1583 54.2083 68.123C54.5854 67.9271 54.9057 67.6377 55.1388 67.2824C55.2671 67.0899 55.5045 66.4899 55.1837 64.4847C54.8725 62.5533 54.1602 59.9481 53.14 56.2136L51.462 50.0986C47.561 52.4868 43.0744 53.7473 38.5003 53.74C33.9263 53.7473 29.4397 52.4868 25.5387 50.0986Z"
+                        fill="white" />
+                </svg>
+            </div>
+        </a>
+        <a href="eventos.html">
+            <div id="eventos">
+                <h3>EVENTOS</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                    <path
+                        d="M69.9997 56.6663V26.6663H23.333V56.6663H69.9997ZM69.9997 9.99967C71.7678 9.99967 73.4635 10.7021 74.7137 11.9523C75.964 13.2025 76.6663 14.8982 76.6663 16.6663V56.6663C76.6663 58.4345 75.964 60.1301 74.7137 61.3804C73.4635 62.6306 71.7678 63.333 69.9997 63.333H23.333C21.5649 63.333 19.8692 62.6306 18.619 61.3804C17.3687 60.1301 16.6663 58.4345 16.6663 56.6663V16.6663C16.6663 14.8982 17.3687 13.2025 18.619 11.9523C19.8692 10.7021 21.5649 9.99967 23.333 9.99967H26.6663V3.33301H33.333V9.99967H59.9997V3.33301H66.6663V9.99967H69.9997ZM9.99967 69.9997H56.6663V76.6663H9.99967C8.23156 76.6663 6.53587 75.964 5.28563 74.7137C4.03539 73.4635 3.33301 71.7678 3.33301 69.9997V29.9997H9.99967V69.9997ZM63.333 49.9997H49.9997V36.6663H63.333V49.9997Z"
+                        fill="white" />
+                </svg>
+            </div>
+        </a>
+    </section>
+    <section class="videos">
+        <h3 id="contenido">PREPARO MI EXAMEN</h3>
+        <div class="video-container">
+            <div class="video">
+                <h4>Poomsae</h4>
+                <iframe src="https://www.youtube.com/embed/-6hi2gEpNNg?si=5BC3YT8joE89NdnD"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <h4>Técnicas</h4>
+                <iframe src="https://www.youtube.com/embed/HaPGZA-RTDc?si=HMVxFd6Sq8TZgd_D"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="mas-videos">
+            <a href="examen.html" class="ver-mas">Ver más</a>
+        </div>
+    </section>
+    <!--OPCIONES FINAL-->
+    <!--FOOTER-->
+    <footer>
+        <h2>Contacto</h2>
+        <div class="redes">
+            <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <!-- Etiqueta para indicar enlace -->
+            <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <!-- Etiqueta para indicar enlace -->
+            <a href="https://www.tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+        </div>
+        <p>Todos los derechos reservados &copy; 2023 TaekwonDojo</p>
+    </footer>
+    <a href="#" class="subir">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+    <a href="https://walink.co/a8539e" class="wsapp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+    <!--FOOTER FINAL-->
+    <!--SCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!--SCRIPT FINAL-->
+</body>
+
+</html>

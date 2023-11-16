@@ -1,0 +1,1114 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif !important;
+}
+
+/* VARIABLES REUTILIZABLES */
+$color-principal: #E72F59;
+$color-secundario: white;
+$color-terciario: black;
+$color-wsapp: #25D366;
+$color-hover: #ca244b;
+$color-dark: #B61538;
+
+$bs-bordes-fp: 0 0 0 5px green, 0 0 0 15px yellow;
+/* box-shadow foto de perfil*/
+
+$size-nav: 22px;
+$size-h1: 40px;
+$size-h2: 28px;
+$size-h3: 24px;
+$size-h4: 22px;
+$size-p: 20px;
+$size-input: 16px;
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* INICIO SESIÓN */
+
+.inicio {
+    color: $color-secundario;
+    background-color: $color-principal;
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin: 40px;
+
+    h1 {
+        font-weight: normal;
+        font-size: $size-h1;
+    }
+
+    .logo1 {
+        height: 250px;
+        margin: 20px 0px;
+    }
+
+    .correo,
+    .clave {
+        p {
+            font-size: $size-p;
+            font-weight: lighter;
+        }
+
+        input {
+            background-color: $color-secundario;
+            font-size: $size-p;
+            width: 300px;
+            padding: 5px;
+            border: 1px solid #9a9797;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .boton {
+        margin-bottom: 10px;
+
+        .recupera a {
+            color: $color-secundario;
+            font-size: $size-p;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-weight: normal;
+            display: block;
+        }
+
+        .iniciar {
+            text-decoration: none;
+            background-color: $color-secundario;
+            border-radius: 10px;
+            padding: 5px 50px;
+            color: $color-terciario;
+            margin-top: 10px;
+            font-size: $size-p;
+
+            &:hover {
+                background-color: rgb(244, 244, 244);
+                color: $color-terciario;
+            }
+        }
+    }
+
+    p a {
+        color: $color-secundario;
+        font-size: $size-p;
+    }
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: $color-principal;
+
+    a {
+        font-family: 'Lato', sans-serif !important;
+        font-weight: lighter !important;
+        font-size: $size-nav;
+    }
+
+    i {
+        font-size: $size-nav;
+        color: $color-secundario;
+    }
+
+    .navbar-toggler {
+        color: $color-secundario;
+    }
+
+    .nav-link {
+        color: $color-secundario !important;
+        padding-left: 10px;
+
+        &:hover {
+            color: $color-secundario !important;
+            transform: scale(1.05);
+        }
+    }
+
+    &-nav {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        background-color: $color-principal !important;
+        color: $color-secundario !important;
+        border: none !important;
+
+        .dropdown-item {
+            background-color: $color-principal !important;
+            color: $color-secundario !important;
+            text-align: center !important;
+
+            &:hover {
+                background-color: $color-principal !important;
+                color: $color-secundario !important;
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &-collapse {
+        display: flex;
+        justify-content: center;
+        margin: 0 20px;
+    }
+}
+
+/* ========HOME======== */
+
+/* MAIN */
+main {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; // Coloca el video detrás del contenido
+    }
+
+    .titulo {
+        z-index: 1; // Asegura que el título esté sobre el video
+        h1 {
+            color: $color-secundario;
+            border: 4px solid $color-principal;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            animation-duration: 3s;
+            animation-name: aparecer;
+            animation-direction: alternate;
+            animation-iteration-count: 1;
+        }
+    }
+
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: $size-h1;
+}
+
+/* CONTENEDOR PERFIL */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+
+    .perfil {
+        text-align: center;
+        margin: 20px;
+
+        img {
+            border-radius: 50%;
+            box-shadow: $bs-bordes-fp;
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin: 10px;
+            margin-bottom: 10px;
+            font-size: $size-h2;
+        }
+
+        p {
+            margin: 0px 10px;
+        }
+    }
+}
+
+.box-datos {
+    display: flex;
+    justify-content: center !important;
+    margin-bottom: 100px;
+
+    .datos {
+        background-color: $color-principal;
+        width: auto;
+        color: $color-secundario;
+        padding: 20px;
+        font-size: $size-p;
+        margin: 0 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly !important;
+        flex-wrap: wrap;
+
+        h3 {
+            text-align: center;
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-weight: lighter;
+            font-size: $size-p;
+        }
+
+        .dato-column {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+
+            .dato1,
+            .dato2,
+            .dato3,
+            .dato4,
+            .dato5,
+            .dato6 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+/* CONTENIDO OPCIONES */
+.opciones {
+    background-image: url(Multimedia/DSC06054.JPG);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: auto !important;
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3);
+    align-items: center;
+    align-content: center;
+
+    h3 {
+        font-size: $size-h3;
+        font-weight: lighter;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-secundario;
+    }
+
+    #clases,
+    #avances,
+    #eventos {
+        background-color: $color-principal;
+        padding: 20px 10px;
+        margin: 10px 10px;
+        color: $color-secundario;
+        border-radius: 10px;
+        display: flex;
+        /* Agregué display: flex; para centrar verticalmente */
+        justify-content: center;
+        align-items: center;
+        /* Centra verticalmente el contenido */
+    }
+}
+
+/* CONTENIDO VIDEOS */
+.videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2);
+    margin-bottom: 50px;
+
+    h3 {
+        color: $color-principal;
+        font-size: $size-h2;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .video {
+        h4 {
+            font-size: $size-h4;
+            font-weight: normal;
+            text-align: center;
+            margin: 20px;
+        }
+
+        iframe {
+            width: 480px;
+            height: 250px;
+        }
+    }
+
+    .mas-videos {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 20px;
+
+        .ver-mas {
+            background-color: $color-principal;
+            padding: 10px 20px;
+            color: $color-secundario;
+            text-decoration: none;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: $color-hover !important;
+                color: $color-secundario;
+            }
+        }
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: $color-principal;
+    padding: 30px;
+    color: $color-secundario;
+    font-size: $size-p;
+    text-align: center;
+
+    h2 {
+        font-size: $size-h2;
+    }
+
+    a {
+        color: $color-terciario;
+        font-size: $size-h1;
+    }
+
+    i {
+        letter-spacing: 25px;
+        margin: 20px 0px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.subir {
+    background-color: $color-terciario;
+    color: $color-secundario;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 40px;
+    bottom: 90px;
+    text-align: center;
+    line-height: 40px;
+    font-size: $size-h2;
+    box-shadow: 0 0 5px #fff;
+    border-radius: 50%;
+}
+
+.wsapp {
+    background-color: $color-wsapp;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 40px;
+    bottom: 150px;
+    text-align: center;
+    color: $color-secundario;
+    line-height: 40px;
+    font-size: $size-h2;
+    border-radius: 50%;
+}
+
+/*==========MIS CLASES==========*/
+.mis-clases {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; // Coloca el video detrás del contenido
+    }
+
+    .titulo-clases {
+        z-index: 1; // Asegura que el título esté sobre el video
+        h1 {
+            color: $color-secundario;
+            border: 4px solid $color-principal;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            animation-duration: 3s;
+            animation-name: aparecer;
+            animation-direction: alternate;
+            animation-iteration-count: 1;
+        }
+    }
+
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.subtitle {
+    color: $color-principal;
+    text-align: center;
+    margin-top: 50px;
+    font-size: $size-h2 !important;
+}
+
+@mixin card-styles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px !important;
+    width: 250px !important;
+    background-color: $color-principal !important;
+    text-align: center !important;
+    border-radius: 10px;
+    color: $color-secundario !important;
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+        background: linear-gradient(to bottom, $color-principal 40% , $color-dark,);
+    }
+}
+
+.class {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+
+    .card {
+        @include card-styles;
+
+        .title {
+            font-size: $size-h2;
+            font-weight: normal;
+        }
+
+        .fecha,
+        .nombre {
+            font-size: $size-p;
+            font-weight: lighter;
+        }
+
+        .foto-profe {
+            height: 100px !important;
+            width: 100px !important;
+            background-color: $color-secundario;
+            border-radius: 50%;
+            background-image: url(Multimedia/foto-profesor.avif);
+            background-size: cover;
+            background-position: top;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .desc {
+            font-size: $size-h3;
+            font-weight: normal;
+        }
+
+        .noti {
+            i {
+                color: $color-secundario;
+                font-size: 30px;
+
+                &:hover {
+                    color: rgb(237, 236, 236);
+                }
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: lighter;
+            }
+        }
+    }
+}
+
+
+/*=========EVENTOS=========*/
+.mis-eventos {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; // Coloca el video detrás del contenido
+    }
+
+    .titulo-eventos {
+        z-index: 1; // Asegura que el título esté sobre el video
+        h1 {
+            color: $color-secundario;
+            border: 4px solid $color-principal;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            animation-duration: 3s;
+            animation-name: aparecer;
+            animation-direction: alternate;
+            animation-iteration-count: 1;
+        }
+    }
+
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin event-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    width: 450px;
+    background-color: $color-principal;
+    text-align: center;
+    border-radius: 10px;
+    color: $color-secundario;
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+        background: linear-gradient(to bottom, $color-principal 40% , $color-dark,);
+    }
+}
+
+.eventos {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 50px;
+
+
+    .event-card {
+        @include event-style;
+
+        h3 {
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: lighter;
+        }
+
+        .columnas-container {
+            display: flex;
+            justify-content: space-between;
+
+            .columna1 {
+                text-align: left;
+                margin: 20px;
+
+            }
+
+            .columna2 a {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                background-color: $color-secundario;
+                border-radius: 10px;
+                padding: 10px 20px;
+                color: $color-terciario;
+                margin-top: 30px;
+                font-size: 14px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: rgb(244, 244, 244);
+                }
+            }
+        }
+    }
+}
+
+/*========EXAMEN========*/
+.mi-examen {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; // Coloca el video detrás del contenido
+    }
+
+    .titulo-examen {
+        z-index: 1; // Asegura que el título esté sobre el video
+        h1 {
+            color: $color-secundario;
+            border: 4px solid $color-principal;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            animation-duration: 3s;
+            animation-name: aparecer;
+            animation-direction: alternate;
+            animation-iteration-count: 1;
+        }
+    }
+
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.videos-exam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centré horizontalmente el contenido en el contenedor */
+
+    h4 {
+        font-size: $size-h4;
+        font-weight: normal;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    .video {
+        text-align: center;
+        /* Centra horizontalmente el título */
+        margin-bottom: 20px;
+        /* Espacio entre los videos */
+    }
+
+    .pdf-container {
+        width: 100% !important;
+        /* Asegura que el "pdf-container" ocupe todo el ancho */
+        text-align: center !important;
+        margin-bottom: 50px !important;
+
+        iframe {
+            border: 2px solid $color-terciario;
+        }
+    }
+}
+
+/*========MEDIA QUERIES========*/
+
+/*smartphones*/
+@media (min-width: 320px) and (max-width: 767px) {
+
+    /*=====INICIO SESIÓN=====*/
+    .inicio {
+        height: 100vh;
+    }
+
+    .boton {
+        margin-bottom: 20px;
+    }
+
+    .boton .recupera a {
+        margin-bottom: 20px;
+    }
+
+    .boton .iniciar {
+        margin-top: 20px;
+    }
+
+    /*=====HOME=====*/
+    .container-fluid {
+        width: 100% !important;
+    }
+
+    .opciones {
+        margin-bottom: 30px;
+    }
+
+    .videos {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2);
+        justify-content: center;
+    }
+
+    .videos iframe {
+        width: 100vw !important;
+    }
+
+    .datos {
+        width: auto;
+        padding: 20px;
+        font-size: var(--size-p);
+    }
+}
+
+/*tablets*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /*=====INICIO SESION=====*/
+    .inicio {
+        height: 100vh;
+    }
+
+    .correo input,
+    .clave input {
+        width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .boton {
+        margin-bottom: 20px;
+    }
+
+    .boton .recupera a {
+        margin-bottom: 20px;
+    }
+
+    .boton .iniciar {
+        margin-top: 20px;
+    }
+
+    /*=====HOME=====*/
+
+    .box-datos {
+        display: flex;
+        justify-content: center !important;
+        margin-bottom: 100px;
+    }
+
+    .opciones {
+        margin-bottom: 50px;
+    }
+
+    .videos {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2);
+        justify-content: center;
+    }
+
+    .datos {
+        width: auto;
+        padding: 20px;
+        font-size: var(--size-p);
+    }
+}
+
+/*notebooks*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    /*=====INICIO SESION=====*/
+    .inicio {
+        height: 100vh;
+    }
+
+    .correo input,
+    .clave input {
+        width: 500px;
+        margin-bottom: 30px;
+    }
+
+    .boton {
+        margin-bottom: 20px;
+    }
+
+    .boton .recupera a {
+        margin-bottom: 20px;
+    }
+
+    .boton .iniciar {
+        margin-top: 20px;
+    }
+
+    /*=====HOME=====*/
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+    }
+
+    .perfil {
+        text-align: center;
+        margin: 50px;
+    }
+
+    .datos {
+        padding: 10px;
+        margin: 0 200px;
+        font-size: 24px;
+        margin-bottom: 80px;
+    }
+
+    .opciones {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 50px;
+    }
+
+    .opciones h3 {
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .opciones a {
+        text-decoration: none;
+        color: --color-secundario;
+    }
+
+    .opciones #clases,
+    .opciones #avances,
+    .opciones #eventos {
+        padding: 60px;
+    }
+
+
+    .videos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 900px;
+        /* Establece la altura de la sección para centrar verticalmente */
+    }
+
+
+    .videos iframe {
+        width: 600px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .videos h4 {
+        margin-top: 10px;
+        /* Espacio superior para centrar verticalmente los h4 */
+    }
+
+    /* Estilos para el botón "Ver más" */
+    .mas-videos {
+        margin-top: 50px;
+        /* Agrega espacio entre los videos y el botón */
+        text-align: center;
+    }
+
+    .ver-mas {
+        display: inline-block;
+    }
+
+    /*PREPARO MI EXAMEN*/
+    .videos-exam {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: center;
+        /* Centra horizontalmente el contenido en el contenedor */
+    }
+
+    /* Estilos para .video1, .video2, .video3, .video4 */
+    .video1,
+    .video2,
+    .video3,
+    .video4 {
+        text-align: center;
+        /* Centra horizontalmente el título */
+        width: 100%;
+    }
+
+    .pdf-container {
+        width: 100% !important;
+        /* Asegura que el "pdf-container" ocupe todo el ancho */
+        text-align: center !important;
+        margin-bottom: 50px !important;
+    }
+
+}
+
+/*monitores de escritorio*/
+@media (min-width: 1441px) {
+
+    /*=====INICIO SESION=====*/
+    .inicio {
+        height: 100vh;
+    }
+
+    .correo input,
+    .clave input {
+        width: 500px;
+        margin-bottom: 30px;
+    }
+
+    .boton {
+        margin-bottom: 20px;
+    }
+
+    .boton .recupera a {
+        margin-bottom: 20px;
+    }
+
+    .boton .iniciar {
+        margin-top: 20px;
+    }
+
+    /*=====HOME=====*/
+    .opciones {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 50px;
+    }
+
+    .opciones h3 {
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .opciones a {
+        text-decoration: none;
+        color: var(--color-secundario);
+    }
+
+    .opciones #clases,
+    .opciones #avances,
+    .opciones #eventos {
+        padding: 100px;
+    }
+
+    #contenido {
+        max-width: 1200px;
+        /* Establece una anchura máxima */
+        margin: 0 auto;
+        /* Centra horizontalmente el elemento */
+    }
+
+
+    .video-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .video {
+        width: 60%;
+        /* Esto hace que cada video ocupe el 48% del espacio disponible */
+        text-align: center;
+    }
+
+    .video iframe {
+        height: 300px;
+        width: 600px;
+    }
+
+    /* Estilos para el botón "Ver más" */
+    .mas-videos {
+        margin-top: 20px;
+        /* Agrega espacio entre los videos y el botón */
+        text-align: center;
+    }
+
+    .ver-mas {
+        display: inline-block;
+    }
+
+    /*PREPARO MI EXAMEN*/
+    .videos-exam {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: center;
+        /* Centra horizontalmente el contenido en el contenedor */
+    }
+
+    /* Estilos para .video1, .video2, .video3, .video4 */
+    .video1,
+    .video2,
+    .video3,
+    .video4 {
+        text-align: center;
+        /* Centra horizontalmente el título */
+        width: 100%;
+    }
+
+}

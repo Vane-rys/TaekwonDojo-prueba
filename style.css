@@ -1,0 +1,941 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif !important;
+}
+
+/* VARIABLES REUTILIZABLES */
+/* box-shadow foto de perfil*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* INICIO SESIÓN */
+.inicio {
+  color: white;
+  background-color: #E72F59;
+  display: block;
+  text-align: center;
+  align-items: center;
+  margin: 40px;
+}
+.inicio h1 {
+  font-weight: normal;
+  font-size: 40px;
+}
+.inicio .logo1 {
+  height: 250px;
+  margin: 20px 0px;
+}
+.inicio .correo p,
+.inicio .clave p {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.inicio .correo input,
+.inicio .clave input {
+  background-color: white;
+  font-size: 20px;
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #9a9797;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.inicio .boton {
+  margin-bottom: 10px;
+}
+.inicio .boton .recupera a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: normal;
+  display: block;
+}
+.inicio .boton .iniciar {
+  text-decoration: none;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 50px;
+  color: black;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.inicio .boton .iniciar:hover {
+  background-color: rgb(244, 244, 244);
+  color: black;
+}
+.inicio p a {
+  color: white;
+  font-size: 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #E72F59;
+}
+.navbar a {
+  font-family: "Lato", sans-serif !important;
+  font-weight: lighter !important;
+  font-size: 22px;
+}
+.navbar i {
+  font-size: 22px;
+  color: white;
+}
+.navbar .navbar-toggler {
+  color: white;
+}
+.navbar .nav-link {
+  color: white !important;
+  padding-left: 10px;
+}
+.navbar .nav-link:hover {
+  color: white !important;
+  transform: scale(1.05);
+}
+.navbar-nav {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.navbar .dropdown-menu {
+  background-color: #E72F59 !important;
+  color: white !important;
+  border: none !important;
+}
+.navbar .dropdown-menu .dropdown-item {
+  background-color: #E72F59 !important;
+  color: white !important;
+  text-align: center !important;
+}
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #E72F59 !important;
+  color: white !important;
+  transform: scale(1.05);
+}
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+/* ========HOME======== */
+/* MAIN */
+main {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+main video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+main .titulo {
+  z-index: 1;
+}
+main .titulo h1 {
+  color: white;
+  border: 4px solid #E72F59;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  animation-duration: 3s;
+  animation-name: aparecer;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+}
+
+/* CONTENEDOR PERFIL */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+.contenedor .perfil {
+  text-align: center;
+  margin: 20px;
+}
+.contenedor .perfil img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px green, 0 0 0 15px yellow;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.contenedor .perfil h2 {
+  margin: 10px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+.contenedor .perfil p {
+  margin: 0px 10px;
+}
+
+.box-datos {
+  display: flex;
+  justify-content: center !important;
+  margin-bottom: 100px;
+}
+.box-datos .datos {
+  background-color: #E72F59;
+  width: auto;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly !important;
+  flex-wrap: wrap;
+}
+.box-datos .datos h3 {
+  text-align: center;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.box-datos .datos p {
+  font-weight: lighter;
+  font-size: 20px;
+}
+.box-datos .datos .dato-column {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.box-datos .datos .dato-column .dato1,
+.box-datos .datos .dato-column .dato2,
+.box-datos .datos .dato-column .dato3,
+.box-datos .datos .dato-column .dato4,
+.box-datos .datos .dato-column .dato5,
+.box-datos .datos .dato-column .dato6 {
+  margin-bottom: 10px;
+}
+
+/* CONTENIDO OPCIONES */
+.opciones {
+  background-image: url(Multimedia/DSC06054.JPG);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: auto !important;
+  margin: 10px 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3);
+  align-items: center;
+  align-content: center;
+}
+.opciones h3 {
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.opciones a {
+  text-decoration: none;
+  color: white;
+}
+.opciones #clases,
+.opciones #avances,
+.opciones #eventos {
+  background-color: #E72F59;
+  padding: 20px 10px;
+  margin: 10px 10px;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  /* Agregué display: flex; para centrar verticalmente */
+  justify-content: center;
+  align-items: center;
+  /* Centra verticalmente el contenido */
+}
+
+/* CONTENIDO VIDEOS */
+.videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2);
+  margin-bottom: 50px;
+}
+.videos h3 {
+  color: #E72F59;
+  font-size: 28px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.videos .video h4 {
+  font-size: 22px;
+  font-weight: normal;
+  text-align: center;
+  margin: 20px;
+}
+.videos .video iframe {
+  width: 480px;
+  height: 250px;
+}
+.videos .mas-videos {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+}
+.videos .mas-videos .ver-mas {
+  background-color: #E72F59;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.videos .mas-videos .ver-mas:hover {
+  background-color: #ca244b !important;
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  background-color: #E72F59;
+  padding: 30px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+footer h2 {
+  font-size: 28px;
+}
+footer a {
+  color: black;
+  font-size: 40px;
+}
+footer i {
+  letter-spacing: 25px;
+  margin: 20px 0px;
+}
+footer i:hover {
+  transform: scale(1.1);
+}
+
+.subir {
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  right: 40px;
+  bottom: 90px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 28px;
+  box-shadow: 0 0 5px #fff;
+  border-radius: 50%;
+}
+
+.wsapp {
+  background-color: #25D366;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  right: 40px;
+  bottom: 150px;
+  text-align: center;
+  color: white;
+  line-height: 40px;
+  font-size: 28px;
+  border-radius: 50%;
+}
+
+/*==========MIS CLASES==========*/
+.mis-clases {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.mis-clases video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.mis-clases .titulo-clases {
+  z-index: 1;
+}
+.mis-clases .titulo-clases h1 {
+  color: white;
+  border: 4px solid #E72F59;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  animation-duration: 3s;
+  animation-name: aparecer;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.subtitle {
+  color: #E72F59;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 28px !important;
+}
+
+.class {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+.class .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px !important;
+  width: 250px !important;
+  background-color: #E72F59 !important;
+  text-align: center !important;
+  border-radius: 10px;
+  color: white !important;
+  transition: transform 0.4s ease-in-out;
+}
+.class .card:hover {
+  transform: scale(1.02);
+  background: linear-gradient(to bottom, #E72F59 40%, #B61538);
+}
+.class .card .title {
+  font-size: 28px;
+  font-weight: normal;
+}
+.class .card .fecha,
+.class .card .nombre {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.class .card .foto-profe {
+  height: 100px !important;
+  width: 100px !important;
+  background-color: white;
+  border-radius: 50%;
+  background-image: url(Multimedia/foto-profesor.avif);
+  background-size: cover;
+  background-position: top;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.class .card .desc {
+  font-size: 24px;
+  font-weight: normal;
+}
+.class .card .noti i {
+  color: white;
+  font-size: 30px;
+}
+.class .card .noti i:hover {
+  color: rgb(237, 236, 236);
+}
+.class .card .noti p {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+/*=========EVENTOS=========*/
+.mis-eventos {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.mis-eventos video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.mis-eventos .titulo-eventos {
+  z-index: 1;
+}
+.mis-eventos .titulo-eventos h1 {
+  color: white;
+  border: 4px solid #E72F59;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  animation-duration: 3s;
+  animation-name: aparecer;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.eventos {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.eventos .event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 450px;
+  background-color: #E72F59;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  transition: transform 0.4s ease-in-out;
+}
+.eventos .event-card:hover {
+  transform: scale(1.02);
+  background: linear-gradient(to bottom, #E72F59 40%, #B61538);
+}
+.eventos .event-card h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+.eventos .event-card h4 {
+  font-size: 16px;
+  font-weight: lighter;
+}
+.eventos .event-card .columnas-container {
+  display: flex;
+  justify-content: space-between;
+}
+.eventos .event-card .columnas-container .columna1 {
+  text-align: left;
+  margin: 20px;
+}
+.eventos .event-card .columnas-container .columna2 a {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: black;
+  margin-top: 30px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.eventos .event-card .columnas-container .columna2 a:hover {
+  background-color: rgb(244, 244, 244);
+}
+
+/*========EXAMEN========*/
+.mi-examen {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.mi-examen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.mi-examen .titulo-examen {
+  z-index: 1;
+}
+.mi-examen .titulo-examen h1 {
+  color: white;
+  border: 4px solid #E72F59;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  animation-duration: 3s;
+  animation-name: aparecer;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.videos-exam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centré horizontalmente el contenido en el contenedor */
+}
+.videos-exam h4 {
+  font-size: 22px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.videos-exam .video {
+  text-align: center;
+  /* Centra horizontalmente el título */
+  margin-bottom: 20px;
+  /* Espacio entre los videos */
+}
+.videos-exam .pdf-container {
+  width: 100% !important;
+  /* Asegura que el "pdf-container" ocupe todo el ancho */
+  text-align: center !important;
+  margin-bottom: 50px !important;
+}
+.videos-exam .pdf-container iframe {
+  border: 2px solid black;
+}
+
+/*========MEDIA QUERIES========*/
+/*smartphones*/
+@media (min-width: 320px) and (max-width: 767px) {
+  /*=====INICIO SESIÓN=====*/
+  .inicio {
+    height: 100vh;
+  }
+  .boton {
+    margin-bottom: 20px;
+  }
+  .boton .recupera a {
+    margin-bottom: 20px;
+  }
+  .boton .iniciar {
+    margin-top: 20px;
+  }
+  /*=====HOME=====*/
+  .container-fluid {
+    width: 100% !important;
+  }
+  .opciones {
+    margin-bottom: 30px;
+  }
+  .videos {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2);
+    justify-content: center;
+  }
+  .videos iframe {
+    width: 100vw !important;
+  }
+  .datos {
+    width: auto;
+    padding: 20px;
+    font-size: var(--size-p);
+  }
+}
+/*tablets*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  /*=====INICIO SESION=====*/
+  .inicio {
+    height: 100vh;
+  }
+  .correo input,
+  .clave input {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+  .boton {
+    margin-bottom: 20px;
+  }
+  .boton .recupera a {
+    margin-bottom: 20px;
+  }
+  .boton .iniciar {
+    margin-top: 20px;
+  }
+  /*=====HOME=====*/
+  .box-datos {
+    display: flex;
+    justify-content: center !important;
+    margin-bottom: 100px;
+  }
+  .opciones {
+    margin-bottom: 50px;
+  }
+  .videos {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2);
+    justify-content: center;
+  }
+  .datos {
+    width: auto;
+    padding: 20px;
+    font-size: var(--size-p);
+  }
+}
+/*notebooks*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /*=====INICIO SESION=====*/
+  .inicio {
+    height: 100vh;
+  }
+  .correo input,
+  .clave input {
+    width: 500px;
+    margin-bottom: 30px;
+  }
+  .boton {
+    margin-bottom: 20px;
+  }
+  .boton .recupera a {
+    margin-bottom: 20px;
+  }
+  .boton .iniciar {
+    margin-top: 20px;
+  }
+  /*=====HOME=====*/
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+  }
+  .perfil {
+    text-align: center;
+    margin: 50px;
+  }
+  .datos {
+    padding: 10px;
+    margin: 0 200px;
+    font-size: 24px;
+    margin-bottom: 80px;
+  }
+  .opciones {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 50px;
+  }
+  .opciones h3 {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .opciones a {
+    text-decoration: none;
+    color: --color-secundario;
+  }
+  .opciones #clases,
+  .opciones #avances,
+  .opciones #eventos {
+    padding: 60px;
+  }
+  .videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 900px;
+    /* Establece la altura de la sección para centrar verticalmente */
+  }
+  .videos iframe {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .videos h4 {
+    margin-top: 10px;
+    /* Espacio superior para centrar verticalmente los h4 */
+  }
+  /* Estilos para el botón "Ver más" */
+  .mas-videos {
+    margin-top: 50px;
+    /* Agrega espacio entre los videos y el botón */
+    text-align: center;
+  }
+  .ver-mas {
+    display: inline-block;
+  }
+  /*PREPARO MI EXAMEN*/
+  .videos-exam {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    /* Centra horizontalmente el contenido en el contenedor */
+  }
+  /* Estilos para .video1, .video2, .video3, .video4 */
+  .video1,
+  .video2,
+  .video3,
+  .video4 {
+    text-align: center;
+    /* Centra horizontalmente el título */
+    width: 100%;
+  }
+  .pdf-container {
+    width: 100% !important;
+    /* Asegura que el "pdf-container" ocupe todo el ancho */
+    text-align: center !important;
+    margin-bottom: 50px !important;
+  }
+}
+/*monitores de escritorio*/
+@media (min-width: 1441px) {
+  /*=====INICIO SESION=====*/
+  .inicio {
+    height: 100vh;
+  }
+  .correo input,
+  .clave input {
+    width: 500px;
+    margin-bottom: 30px;
+  }
+  .boton {
+    margin-bottom: 20px;
+  }
+  .boton .recupera a {
+    margin-bottom: 20px;
+  }
+  .boton .iniciar {
+    margin-top: 20px;
+  }
+  /*=====HOME=====*/
+  .opciones {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 50px;
+  }
+  .opciones h3 {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .opciones a {
+    text-decoration: none;
+    color: var(--color-secundario);
+  }
+  .opciones #clases,
+  .opciones #avances,
+  .opciones #eventos {
+    padding: 100px;
+  }
+  #contenido {
+    max-width: 1200px;
+    /* Establece una anchura máxima */
+    margin: 0 auto;
+    /* Centra horizontalmente el elemento */
+  }
+  .video-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .video {
+    width: 60%;
+    /* Esto hace que cada video ocupe el 48% del espacio disponible */
+    text-align: center;
+  }
+  .video iframe {
+    height: 300px;
+    width: 600px;
+  }
+  /* Estilos para el botón "Ver más" */
+  .mas-videos {
+    margin-top: 20px;
+    /* Agrega espacio entre los videos y el botón */
+    text-align: center;
+  }
+  .ver-mas {
+    display: inline-block;
+  }
+  /*PREPARO MI EXAMEN*/
+  .videos-exam {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    /* Centra horizontalmente el contenido en el contenedor */
+  }
+  /* Estilos para .video1, .video2, .video3, .video4 */
+  .video1,
+  .video2,
+  .video3,
+  .video4 {
+    text-align: center;
+    /* Centra horizontalmente el título */
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
